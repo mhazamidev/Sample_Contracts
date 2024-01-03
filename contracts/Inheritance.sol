@@ -20,4 +20,10 @@ contract Child is Parent {
         uint z = x - y;
         return z;
     }
+
+    function dif2(uint x, uint y) public pure returns (uint) {
+        uint z = dif(x, y);
+        uint w = super.dif(x, y);
+        return z;
+    }
 }
