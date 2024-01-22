@@ -45,8 +45,8 @@ contract Auction {
     }
 
     modifier isHeighestBid(){
-require(msg.value>hieghestBid,"your bid is less than the Heighest Bid");
-_;
+        require(msg.value>hieghestBid,"your bid is less than the Heighest Bid");
+_       ;
     }
 
     function startAuction(
