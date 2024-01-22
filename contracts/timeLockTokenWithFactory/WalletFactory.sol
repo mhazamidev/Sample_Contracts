@@ -30,19 +30,19 @@ contract WalletFactory {
         revert();
     }
 
-    function getWallets(address owner) public view returns (address[]) {
-        return wallets[owner];
+    function getWallets(address _owner) public view returns (address[] memory) {
+        return wallets[_owner];
     }
 
     function newTimeLockWallet(
-        address owner,
+        address _owner,
         uint unlockDuration,
         address tokenAddress
     ) public payable onlyOwner returns (address wallet) {
         // Create new wallet
         TimeLockWallet tw = new TimeLockWallet(
             address(this),
-            owner,
+            _owner,
             unlockDuration
         );
 
@@ -54,13 +54,13 @@ contract WalletFactory {
 
         // send 1000 token from this transaction to the created wallet
         IERC20 token = IERC20(tokenAddress);
-        //     token.transfer(wallet, 1000 * 10 ** token.decimals());
+        token.transfer(wallet, 1000 * 1e18);
 
         emit Created(
             wallet,
             msg.sender,
             owner,
-            blok.timestamp,
+            block.timestamp,
             unlockDuration,
             msg.value
         );

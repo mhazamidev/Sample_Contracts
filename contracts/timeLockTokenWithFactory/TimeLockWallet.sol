@@ -46,7 +46,7 @@ contract TimeLockWallet {
     function withdrawToken(address _tokenAddress) public onlyOwner unlocked {
         IERC20 token = IERC20(_tokenAddress);
         uint tokenBalance = token.balanceOf(address(this));
-        token.trnsfer(owner, tokenBalance);
+        token.transfer(owner, tokenBalance);
         emit WithdrawToken(_tokenAddress, owner, tokenBalance);
     }
 
