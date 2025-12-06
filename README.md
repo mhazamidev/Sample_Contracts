@@ -249,3 +249,93 @@ Diagrams and architecture notes will be added to further illustrate interactions
 ====================================
 
 A folder is prepared for backend integration using Nethereum:
+
+This integration demonstrates:
+
+- Connecting to an Ethereum RPC endpoint  
+- Reading on-chain state  
+- Sending signed transactions  
+- Managing wallets and deployments  
+- Backend ↔ Smart Contract communication  
+
+*Implementation coming soon.*
+
+---
+
+# 🚀 Running the Contracts (Hardhat)
+
+Install dependencies:
+
+```bash
+npm install
+
+Compile contracts:
+
+npx hardhat compile
+
+Run a local node:
+
+npx hardhat node
+
+Deploy:
+
+npx hardhat run scripts/deploy.js --network localhost
+
+🧪 Testing (Upcoming)
+
+Tests will showcase:
+
+Reentrancy defense validation
+
+Auction / marketplace bidding logic
+
+MultiSig execution flow
+
+Factory deployment reproducibility
+
+Oracle data consistency
+
+🎯 Why This Repository Matters
+
+This collection highlights real engineering maturity by demonstrating:
+
+Security-conscious development
+
+Strong understanding of EVM internals
+
+Practical business-oriented smart contract design
+
+Architectural thinking behind decentralized systems
+
+Ability to communicate patterns clearly (essential for senior roles)
+
+Hands-on familiarity with oracles, workflows, and multi-step financial logic
+
+Integration readiness for full-stack Web3 applications
+
+These qualities are highly valued in blockchain engineering roles globally.
+
+🛠 Tech Stack
+
+Solidity ≥0.8.15
+
+Hardhat
+
+Node.js
+
+OpenZeppelin Contracts
+
+Chainlink Price Feeds
+
+Nethereum (.NET integration)
+
+EVM-compatible blockchains
+
+📄 License
+
+This project is licensed under the MIT License.
+
+🙌 Contributions
+
+This repository is designed as a structured educational and architectural reference.
+Feel free to clone, extend, or adapt patterns for learning or production exploration.
